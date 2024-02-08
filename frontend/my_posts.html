@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./my_posts.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>My posts</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="nav-menu">
+                <div class="menu">
+                    <li class="menu-item"><a href="./index.html" class="menu-item-link">All posts</a></li>
+                    <li class="menu-item"><a href="./my_posts.html" class="menu-item-link">My posts</a></li>
+                </div>
+                <div class="menu-user">
+                    <span class="name-user">Khanh Bao</span>
+                    <span class="menu-ava">
+                        <img src="./img/ava1.png" alt="" class="ava-header"/>
+                        <ul class="sub-menu">
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-item-link">Login</a></li>
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-item-link">Register</a></li>
+                        </ul>
+                        <!-- 
+                            khi da dang nhap se hien thi menu dang xuat    
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item"><a href="#" class="sub-menu-item-link">Logout</a></li>
+                            </ul> 
+                        -->
+                    </span>
+                </div>
+            </nav>
+        </header>
+        <div class="main-content">
+            <div class="add-post">
+                <h2 class="title">Add new post</h2>
+                <form id="form-post" action="" method="post">
+                    <div class="form-control">
+                        <label class="post-label" for="post-title">Post title</label>
+                        <input placeholder="Your post title" class="form-input" type="text" name="post-title" id="post-title">
+                    </div>
+                    <div class="form-control">
+                        <label class="post-label" for="post-caption">Post caption</label>
+                        <input placeholder="Your post caption" class="form-input" type="text" name="post-caption" id="post-caption">
+                    </div>
+                    <div class="form-control">
+                        <label class="post-img" for="post-img">
+                            <p>Drag post image here</p>
+                            <i class="fa-solid fa-upload"></i>
+                        </label>
+                        <input class="form-input" type="file" name="post-img" id="post-img">
+                    </div>
+                    <button class="post-btn" type="submit" name="submit-post">Post</button>
+                </form>
+            </div>
+            <div class="posts">
+                <h2 class="title">My posts list</h2>
+                <table class="posts-list">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Caption</th>
+                            <th>Image</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hello World</td>
+                            <td>dsadhsadkjhsadjsahdkjsahdsajhdak jhhjhkjhkjhjhkjhkjhkhkhkjhkjhjhkjhkjhkj dsadasddsadsad</td>
+                            <td>
+                                <img src="./img/content1.png" alt="" class="list-img">
+                            </td>
+                            <td>
+                                <button class="actions-btn edit-btn" name="submit-edit-post" type="submit">Edit</button>
+                                <button class="actions-btn delete-btn" name="submit-delete-post" type="submit">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hello World</td>
+                            <td>dsadhsadkjhsadjsahdkjsahdsajhdak jhhjhkjhkjhjhkjhkjhkhkhkjhkjhjhkjhkjhkj dsadasddsadsad</td>
+                            <td>
+                                <img src="./img/content1.png" alt="" class="list-img">
+                            </td>
+                            <td>
+                                <button class="actions-btn edit-btn" name="submit-edit-post" type="submit">Edit</button>
+                                <button class="actions-btn delete-btn" name="submit-delete-post" type="submit">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hello World</td>
+                            <td>dsadhsadkjhsadjsahdkjsahdsajhdak jhhjhkjhkjhjhkjhkjhkhkhkjhkjhjhkjhkjhkj dsadasddsadsad</td>
+                            <td>
+                                <img src="./img/content1.png" alt="" class="list-img">
+                            </td>
+                            <td>
+                                <button class="actions-btn edit-btn" name="submit-edit-post" type="submit">Edit</button>
+                                <button class="actions-btn delete-btn" name="submit-delete-post" type="submit">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

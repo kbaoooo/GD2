@@ -1,0 +1,217 @@
+.header {
+    max-width: 100%;
+}
+
+body {
+    background-color: #efeded;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: steelblue;
+    height: 77px;
+}
+
+.menu {
+    display: flex;
+    height: 100%;
+}
+
+.menu-item-link {
+    line-height: 77px;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 16px;
+}
+
+.menu-item-link:hover,
+.menu-item-link:active {
+    background-color: rgb(55, 102, 140);
+}
+
+.menu-user {
+    display: flex;
+    align-items: center;
+}
+
+.name-user {
+    color: #fff;
+    margin-right: 8px;
+}
+
+.menu-ava {
+    position: relative;
+    height: 77px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-ava:hover .sub-menu{
+    display: block;
+}
+
+.ava-header {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.sub-menu {
+    width: 150px;
+    position: absolute;
+    top: calc(77px / 2 + 45px / 2);
+    left: 0;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    display: none;
+}
+
+.sub-menu-item-link {
+    color: #333;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    padding: 13px 10px;
+}
+
+.sub-menu-item-link:hover {
+    background-color: #ecebeb;
+}
+
+.main-content {
+    background-color: #fff;
+    width: 936px;
+    margin: 0 auto;
+    padding: 10px 25px;
+}
+
+.title {
+    padding: 10px 0;
+    color: #333;
+}
+
+.form-control {
+    padding: 10px 0;
+}
+
+.post-label {
+    font-weight: 600;
+}
+
+#post-img {
+    display: none;
+}
+
+.form-input {
+    margin-top:5px;
+    display: block;
+    width: 400px;
+    padding: 7px 10px;
+}
+
+.post-img {
+    display: inline-block;
+    width: 400px;
+    text-align: center;
+    padding: 20px 0;
+    border: 2px dotted steelblue;
+    text-align: center;
+    color: steelblue;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.post-btn {
+    background-color: steelblue;
+    color: #fff;
+    padding: 10px 40px;
+    margin-top: 10px;
+}
+
+.post-btn:hover,
+.post-btn:active {
+    background-color: rgb(55, 102, 140);
+}
+
+.posts {
+    margin-top: 30px;
+}
+
+.posts-list {
+    width: 100%;
+}
+
+th {
+    background-color: steelblue;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #d9d7d7;
+}
+
+th {
+    padding: 10px 0;
+}
+
+td {
+    padding: 15px 5px;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+.actions-btn {
+    padding: 7px 10px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.edit-btn {
+    background-color: steelblue;
+}
+
+.edit-btn:hover,
+.edit-btn:active {
+    background-color: rgb(55, 102, 140);
+}
+
+.delete-btn {
+    background-color: rgb(249, 52, 91);
+}
+
+.delete-btn:active,
+.delete-btn:hover {
+    background-color: rgb(213, 44, 78);
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 230px;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 328px;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    max-width: 170px;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 150px;
+}
+
+.list-img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+}

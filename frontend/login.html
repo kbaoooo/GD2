@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Welcome, Login</h1>
+        <form id="form-login" action="" method="post">
+            <div class="form-content">
+                <div class="form-group">
+                    <div class="form-control">
+                        <label class="login-form-label" for="usernameInput">Username</label>
+                        <input class="form-input usernameInput" name="usernameInput" id="usernameInput" type="text" placeholder="Enter username..." required />
+                    </div>
+                    <div class="form-control">
+                        <label class="login-form-label" for="passInput" class="pass">Password</label>
+                        <div class="pass">
+                            <input type="password" name="passInput" class="form-input passInput" id="passInput" placeholder="Enter password..." required>
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <!-- <i class="fa-solid fa-eye-slash"></i> -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-control">
+                        <button name="submit-login" class="btn btn-login" type="submit">Login</button>
+                    </div>
+                    <div class="form-control">
+                        <label class="login-form-label">Don't have an account</label>
+                        <button name="register" class="btn btn-register" type="submit">Register</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
