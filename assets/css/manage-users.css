@@ -1,0 +1,108 @@
+@media (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 77px !important;
+}
+
+.table-users {
+    max-width: 1230px;
+    width: 1230px;
+    margin-top: 30px;
+}
+
+.add-new-user-btn {
+    font-size: 15px;
+    color: #fff !important;
+    margin-top: 20px;
+    padding: 8px 10px;
+}
+
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 60px;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 190px;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 190px;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 250px;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+    width: 80px;
+}
+
+th:nth-child(6),
+td:nth-child(6) {
+    width: 80px;
+}
+
+th:nth-child(7),
+td:nth-child(7) {
+    width: 84px;
+}
+
+th:nth-child(8),
+td:nth-child(8) {
+    width: 150px;
+}
+
+.user-ava {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.btn {
+    color: #fff;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.edit-btn {
+    background-color: steelblue;
+}
+
+.edit-btn:hover,
+.edit-btn:active {
+    background-color: rgb(55, 102, 140);
+}
+
+.delete-btn {
+    background-color: rgb(249, 52, 91);
+}
+
+.delete-btn:active,
+.delete-btn:hover {
+    background-color: rgb(213, 44, 78);
+}
+
+.ava-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+tr {
+    text-align: center;
+}

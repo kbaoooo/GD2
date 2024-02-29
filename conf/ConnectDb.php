@@ -6,7 +6,7 @@ class Connect {
 
     const DBUSER = "root";
 
-    const PASSWORD = "lphnhi2607";
+    const PASSWORD = "";
 
     protected $conn = NULL;
     

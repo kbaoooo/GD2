@@ -1,4 +1,4 @@
-body {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@ body {
 #form-register {
     background-color: #fff;
     width: 400px;
-    height: 480px;
+    height: 540px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,7 +54,8 @@ body {
     position: relative;
 }
 
-.fa-eye {
+.fa-eye,
+.fa-eye-slash {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -87,4 +88,10 @@ body {
 .btn-register:hover,
 .btn-register:active {
     background-color: rgb(10, 96, 96);
+}
+
+.pass-condition {
+    font-size: 12px;
+    color: orange;
+    margin-bottom: 3px;
 }

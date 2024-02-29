@@ -7,7 +7,7 @@ AuthMiddleWare::checkLoginStatus();
 
 <div class=" posts">
     <?php
-    foreach ($postsList as $post) { ?>
+    foreach ($resultPost as $post) { ?>
         <div class="post">
             <div class="post-header">
                 <div class="post-user">
@@ -24,13 +24,11 @@ AuthMiddleWare::checkLoginStatus();
                     ?>
                 </span>
             </div>
-            <?php if ($post['title']) { ?>
-                <h3 class="title"><?php echo $post['title'] ?></h3>
-            <?php }  ?>
+            <h3 class="title"><?php echo $post['title'] ?></h3>
             <div class="content">
                 <?php echo $post['content'] ?>
             </div>
-            <?php if ($post['img'] && $post['img'] != 'NULL') { ?>
+            <?php if ($post['img'] && $post['img'] != "NULL") { ?>
                 <div class="post-img">
                     <img src="data:image/*;base64,<?php echo $post['img']; ?>" alt="" class="img-content">
                 </div>

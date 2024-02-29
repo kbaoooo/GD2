@@ -5,40 +5,90 @@ include_once('./middleware/AuthMiddleWare.php');
 AuthMiddleWare::checkLoginStatus();
 ?>
 
-
-<div class="profile">
-    <form class="form-profile" action="" method="post" enctype="multipart/form-data">
-        <div class="form-ava">
-            <h2 class="form-title">Avatar</h2>
-            <label for="input-ava" class="ava-label">
-                <button class="delete-ava"><i class="fa-solid fa-xmark"></i></button>
-                <div class="float-layout-img">
-                    <i class="fa-solid fa-image"></i>
+<div class="content-wrapper">
+    <h2 class="title">Edit user</h2>
+    <form id="form-user" action="" method="post" enctype="multipart/form-data">
+        <?php if (isset($user) && $user) {
+            $_SESSION['updated-user']['avatar'] = $user['avatar'];
+            $_SESSION['updated-user']['password'] = $user['password'];
+        ?>
+            <?php if ($user['avatar']) { ?>
+                <div class="form-ava">
+                    <h2 class="form-title">Avatar</h2>
+                    <label for="input-ava" class="ava-label">
+                        <button class="delete-ava"><i class="fa-solid fa-xmark"></i></button>
+                        <div class="float-layout-img">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <img src="data:image/*;base64,<?php echo $user['avatar']; ?>" alt="" class="ava-img">
+                    </label>
+                    <input type="file" name="input-ava" id="input-ava">
                 </div>
-                <img src="data:image/*;base64,<?php echo $user['avatar']; ?>" alt="" class="ava-img">
-            </label>
-            <input type="file" name="input-ava" id="input-ava">
-        </div>
-        <div class="form-info">
+            <?php } ?>
             <div class="form-control">
-                <h2 class="form-title">Nickname</h2>
-                <input type="text" name="nickname" class="info-input" value="<?php echo $user['nickname'] ?>" placeholder="Nickname">
+                <label class="user-label" for="username">Username</label>
+                <input placeholder="Your user title" class="form-input" type="text" name="username" id="username" value="<?php if ($user['username']) {
+                                                                                                                                echo trim($user['username']);
+                                                                                                                            } else {
+                                                                                                                                echo '';
+                                                                                                                            } ?>">
             </div>
-            <button type="submit" class="btn-submit-info" name="submit-info">Save Info</button>
-        </div>
-        <div class="layout"></div>
-        <input type="" id="confirm-delete-input" style="display: none;" />
-        <div class="pop-up-delete">
-            <label class="message">
-                <h3 class="message-label">Do you want to delete your avatar?</h3>
-                <div class="btns-delete">
-                    <button class='btn-delete cancel'>Cancel</button>
-                    <button class="btn-delete delete">Delete</button>
+            <div class="form-control">
+                <label class="user-label" for="nickname">Nickname</label>
+                <input required class="form-input" type="text" name="nickname" id="nickname" value="<?php if ($user['nickname']) {
+                                                                                                        echo trim($user['nickname']);
+                                                                                                    } else {
+                                                                                                        echo '';
+                                                                                                    } ?>">
+            </div>
+            <div class="form-control">
+                <label class="user-label" for="email">Email</label>
+                <input required class="form-input" type="text" name="email" id="email" value="<?php if ($user['email']) {
+                                                                                                    echo trim($user['email']);
+                                                                                                } else {
+                                                                                                    echo '';
+                                                                                                } ?>">
+            </div>
+            <div class="form-control">
+                <label class="user-label" for="password">Change password<span style="color: red; font-size: 12px;"> (*Optional)</span></label>
+                <div class="pass">
+                    <input name="password" type="password" class="form-input password" id="password" placeholder="Enter password...">
+                    <i class="fa-solid fa-eye" onclick="handleToggleIcon(this)"></i>
                 </div>
-            </label>
-        </div>
+            </div>
+            <div class="form-control">
+                <label class="user-label" for="">Role</label>
+                <select name="role" id="role">
+                    <option value="ADMIN" <?php
+                                            if ($user['role'] == "ADMIN") {
+                                                echo "selected";
+                                            }
+                                            ?>>Admin</option>
+                    <option value="USER" <?php
+                                            if ($user['role'] == "USER") {
+                                                echo "selected";
+                                            }
+                                            ?>>User</option>
+                </select>
+            </div>
+            <div class="layout"></div>
+            <input type="" id="confirm-delete-input" style="display: none;" />
+            <div class="pop-up-delete">
+                <label class="message">
+                    <h3 class="message-label">Do you want to delete your avatar?</h3>
+                    <div class="btns-delete">
+                        <button class='btn-delete cancel'>Cancel</button>
+                        <button class="btn-delete delete">Delete</button>
+                    </div>
+                </label>
+            </div>
+            <button class="update-user-btn" type="submit" name="submit-update-user">Update user</button>
+        <?php } else { ?>
+            <h3>User not found</h3>
+        <?php } ?>
     </form>
 </div>
+
 
 <script>
     const deleteBtn = document.querySelector('.delete-ava');

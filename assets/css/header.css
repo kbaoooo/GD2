@@ -1,0 +1,122 @@
+header {
+    position: fixed;
+    top: 0;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: steelblue;
+}
+
+body {
+    background-color: #efeded;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 77px;
+    width: 900px;
+    margin: 0 auto;
+}
+
+.search {
+    height: 40px;
+}
+
+.search-form {
+    display: flex;
+    height: 100%;
+    width: 419px;
+    background-color: #fff;
+    border-radius: 17px;
+}
+
+#find-input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: 0;
+    font-size: 16.5px;
+    padding: 5px 18px;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+}
+
+.search-icon-btn {
+    width: 50px;
+    background-color: transparent;
+    font-size: 15px;
+    border-left: 1px solid #333;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+}
+
+.menu {
+    display: flex;
+    height: 100%;
+}
+
+.menu-item-link {
+    line-height: 77px;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 16px;
+}
+
+.menu-item-link:hover,
+.menu-item-link:active {
+    background-color: rgb(55, 102, 140);
+}
+
+.menu-user {
+    display: flex;
+    align-items: center;
+}
+
+.name-user {
+    color: #fff;
+    margin-right: 8px;
+}
+
+.menu-ava {
+    position: relative;
+    height: 77px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-ava:hover .sub-menu {
+    display: block;
+}
+
+.ava-header {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.sub-menu {
+    width: 150px;
+    position: absolute;
+    top: calc(77px / 2 + 45px / 2);
+    left: 0;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    display: none;
+}
+
+.sub-menu-item-link {
+    color: #333;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    padding: 13px 10px;
+}
+
+.sub-menu-item-link:hover {
+    background-color: #ecebeb;
+    color: #333;
+}

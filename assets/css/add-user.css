@@ -19,11 +19,11 @@
     padding: 10px 0;
 }
 
-.post-label {
+.user-label {
     font-weight: 600;
 }
 
-#post-img {
+#user-img {
     display: none;
 }
 
@@ -34,7 +34,7 @@
     padding: 7px 10px;
 }
 
-.post-img {
+.user-img {
     display: inline-block;
     width: 400px;
     text-align: center;
@@ -46,27 +46,27 @@
     cursor: pointer;
 }
 
-.post-btn {
+.user-btn {
     background-color: steelblue;
     color: #fff;
     padding: 10px 40px;
     margin-top: 10px;
 }
 
-.post-btn:hover,
-.post-btn:active {
+.user-btn:hover,
+.user-btn:active {
     background-color: rgb(55, 102, 140);
 }
 
-.posts {
+.users {
     padding: 30px 0;
 }
 
-.posts-list {
+.users-list {
     width: 100%;
 }
 
-.post-img p {
+.user-img p {
     white-space: nowrap;
     /* Prevent text from wrapping */
     overflow: hidden;
@@ -75,74 +75,15 @@
     /* Display ellipsis (...) when text overflows */
 }
 
-th {
-    background-color: steelblue;
-    color: #fff;
+#role {
+    display: block;
+    width: 400px;
+    padding: 8px 5px;
+    margin-top: 3px;
 }
 
-tr:nth-child(even) {
-    background-color: #d9d7d7;
-}
-
-th {
-    padding: 10px 0;
-}
-
-td {
-    padding: 15px 5px;
-}
-
-td:last-child {
-    text-align: center;
-}
-
-.actions-btn {
-    padding: 7px 10px;
-    color: #fff;
-    border-radius: 3px;
-    font-size: 14px;
-}
-
-.edit-btn {
-    background-color: steelblue;
-}
-
-.edit-btn:hover,
-.edit-btn:active {
-    background-color: rgb(55, 102, 140);
-}
-
-.delete-btn {
-    background-color: rgb(249, 52, 91);
-}
-
-.delete-btn:active,
-.delete-btn:hover {
-    background-color: rgb(213, 44, 78);
-}
-
-th:nth-child(1),
-td:nth-child(1) {
-    width: 230px;
-}
-
-th:nth-child(2),
-td:nth-child(2) {
-    width: 328px;
-}
-
-th:nth-child(3),
-td:nth-child(3) {
-    max-width: 170px;
-}
-
-th:nth-child(4),
-td:nth-child(4) {
-    width: 150px;
-}
-
-.list-img {
-    width: 100%;
-    height: 90px;
-    object-fit: cover;
+#role>option {
+    height: 20px;
+    padding: 8px 5px;
+    font-size: 15px;
 }

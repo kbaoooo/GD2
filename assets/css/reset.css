@@ -25,3 +25,17 @@ input {
 a {
     text-decoration: none;
 }
+
+a:hover {
+    text-decoration: none !important;
+    color: #fff;
+}
+
+textarea {
+    outline: 0;
+    resize: none;
+}
+
+select {
+    outline: 0;
+}
